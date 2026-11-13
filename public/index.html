@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Get in touch</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="contact-card">
+      <div class="intro">
+        <p class="eyebrow">CONTACT</p>
+        <h1>Let’s talk.</h1>
+        <p class="description">Have a question or a project in mind? Send a note and I’ll get back to you.</p>
+      </div>
+
+      <form id="contact-form">
+        <div class="field-row">
+          <label>
+            Your name
+            <input name="name" type="text" autocomplete="name" maxlength="100" placeholder="Jane Smith" required>
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" autocomplete="email" maxlength="254" placeholder="jane@example.com" required>
+          </label>
+        </div>
+        <label>
+          Subject
+          <input name="subject" type="text" maxlength="150" placeholder="How can I help?" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" maxlength="5000" placeholder="Write your message here..." required></textarea>
+        </label>
+        <label class="upload-field">
+          <span>Photo attachment <span class="optional">(optional, up to 5 MB)</span></span>
+          <input name="photo" type="file" accept="image/jpeg,image/png,image/gif,image/webp">
+          <span class="upload-note">JPEG, PNG, GIF, or WebP</span>
+        </label>
+        <button type="submit">Send message <span aria-hidden="true">→</span></button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+  </body>
+</html>
